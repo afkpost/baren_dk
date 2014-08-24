@@ -1,0 +1,21 @@
+.events .list-header {
+    color: #CD0000;
+}
+
+.events .list-header:first-letter {
+    text-transform: uppercase;
+}
+
+
+.events ul h2 {
+    font-size: 1.1em;
+    margin-bottom: 0;
+}
+
+.events ul h3 {
+    margin-top: 0;
+}
+
+.events ul h3:first-letter {
+    text-transform: uppercase;
+}

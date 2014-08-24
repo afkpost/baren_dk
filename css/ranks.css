@@ -1,0 +1,27 @@
+#ranks ul {
+    padding: 0;
+}
+
+#ranks li .score {
+    font-size: 12pt;
+    float: right;
+}
+
+#ranks li {
+    font-size: 1.1em;
+    margin-bottom: 0.1em;
+}
+
+#ranks li:nth-child(1) {
+    font-weight: bold;
+    margin-bottom: 0.4em;
+}
+
+#ranks li:nth-child(n+6) {
+    display: none;
+    font-size: 0.9em;
+}
+
+#ranks ol.open li {
+    display: list-item;
+}

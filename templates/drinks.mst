@@ -1,0 +1,27 @@
+<div class='drinks'>
+    <ul class='ui-mini'>
+        {{#groups}}
+            <li data-role='list-divider'><h2>{{group}}</h2></li>
+            {{#drinks}}
+                <li data-isset='false'>
+                    <h3>
+                        {{drink}}
+                        {{#price}}
+                            <span class='price'>
+                                {{price}}
+                                {{#amount}}
+                                    kr / {{amount}} stk: {{offer}}
+                                {{/amount}}
+                            </span>
+                        {{/price}}
+                    </h3>
+                    <p>
+                        {{#description}}
+                            {{markdown}}
+                        {{/description}}
+                    </p>
+                </li>
+            {{/drinks}}
+        {{/groups}}
+    </ul>
+</div>

@@ -1,0 +1,19 @@
+<h1>Mest besøgende gæst</h1>
+<ol>
+    {{#user}}
+        <li>{{name}} <span class='score'>{{count}} besøg</span></li>
+    {{/user}}
+</ol>
+{{^user}}
+    <i>Ingen checkins endnu - skal du være den første?</i>
+{{/user}}
+
+<h1>Mest besøgende gang</h1>
+<ol>
+    {{#clan}}
+        <li>Blok {{clan}} <span class='score'>{{count}} besøg</span></li>
+    {{/clan}}
+</ol>
+{{^clan}}
+    <i>Ingen checkins endnu - skal du være den første?</i>
+{{/clan}}

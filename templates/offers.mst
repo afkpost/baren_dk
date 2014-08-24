@@ -1,0 +1,37 @@
+{{#.}}
+    <div class='offer'>
+        <h1>{{product}}</h1>
+        <div class='poster'>
+            <img src='{{image}}' alt='{{product}}'/>
+            {{#price}}
+                <div class='banner price'>{{price}}</div>
+            {{/price}}
+            {{^price}}
+                <div class='banner'>Free</div>
+            {{/price}}
+            {{#remains}}
+                <div class='limit'>{{remains}}</div>
+            {{/remains}}
+            {{#startDate}}
+                <div class='upcomming text'>{{startDate}}</div>
+            {{/startDate}}
+            {{#used}}
+                <div class='text used'>{{used}}</div>
+            {{/used}}
+            {{#text}}
+                <div class='text'>{{text}}</div>
+            {{/text}}
+        </div>
+        {{#available}}
+            <button class='ui-btn' data-id='{{id}}'>Indløs</button>
+        {{/available}}
+        {{^available}}
+            <button class='ui-btn ui-state-disabled'>Indløs</button>
+        {{/available}}
+    </div>
+{{/.}}
+{{^.}}
+    <div class='no-offer'>
+        Ingen tilbud lige nu
+    </div>
+{{/.}}

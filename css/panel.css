@@ -1,0 +1,9 @@
+#menu li {
+    color: #CD0000;
+}
+
+#menu li:first-letter {
+    color: red;
+    font-weight: bold;
+    font-size: 120%;
+}

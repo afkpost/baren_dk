@@ -1,0 +1,16 @@
+<div class='events'>
+    <h3>{{title}}</h3>
+    <ul data-role='listview' class='ui-mini'>
+        {{#events}}
+            <li data-role='list-divider' class='list-header'>{{month}}</li>
+            {{#events}}
+                <li data-role='collapsible data-isset='false' data-icon='false'>
+                    <a href="{{url}}" target='_system'>
+                        <h2>{{title}}</h2>
+                        <h3>{{date}}</h3>
+                    </a>
+                </li>
+            {{/events}}
+        {{/events}}
+    </ul>
+</div>

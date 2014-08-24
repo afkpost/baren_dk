@@ -1,0 +1,13 @@
+.news h3 {
+    color: #CD0000;
+    margin-bottom: 0;
+}
+
+.news h3:first-letter {
+    text-transform: capitalize;
+}
+
+.news .ui-body {
+    margin-top: 0;
+    border-top-width: 0;
+}

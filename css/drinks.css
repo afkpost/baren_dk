@@ -1,0 +1,26 @@
+.drinks ul h2 {
+    font-size: 1.2em;
+    margin: 0;
+    color: #CD0000;
+}
+
+.drinks ul h2:first-letter {
+    text-transform: uppercase;
+}
+
+.drinks ul h3 .price {
+    float: right;
+    display: inline-block;
+}
+
+.drinks ul h3 {
+    text-transform: capitalize;
+}
+
+.drinks ul h3 .price:after {
+    content: " kr";
+}
+
+.drinks li.open p {
+    white-space: normal;
+}

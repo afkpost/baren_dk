@@ -1,0 +1,28 @@
+#settings table {
+    margin: 2em 0;
+    width: 100%;
+}
+
+#settings table {
+    font-size: 1.1em;
+    border-collapse: collapse;
+}
+
+#settings th[colspan='2'] {
+    font-size: 1.3em;
+    color: #CD0000;
+}
+
+#settings th {
+    text-align: left;
+    font-weight: bold;
+}
+
+#settings td {
+    width: 50%;
+}
+
+#settings td * {
+    width: 100%;
+    text-align: right;
+}
