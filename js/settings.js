@@ -10,7 +10,7 @@ bus.on("init", function (e, app, log) {
         for (i = 11; i <= 53; i += 2) {
             select.append($("<option>").val(i).html("Blok " + i));
         }
-        select.append($("<option>").val("").html("Bor ikke på kollegiet"));
+        select.append($("<option>").val("N/A").html("Bor ikke på kollegiet"));
         
         select.on("change", function () {
             app.updateUser({
