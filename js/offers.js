@@ -1,6 +1,6 @@
 /*globals $, bus, Mustache*/
 
-$(bus).on("init", function (event, app) {
+$(bus).on("init", function (event, app, log) {
     "use strict";
     var elm = $("#offers");
     
@@ -24,7 +24,9 @@ $(bus).on("init", function (event, app) {
 
         elm.on('click', '.offer button', function () {
             var id = $(this).data("id");
-            app.useOffer(id);
+            app.useOffer(id).fail(function () {
+                log.error("Kunne ikke indløse tilbud");
+            });
         });
     });
 });

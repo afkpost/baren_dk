@@ -7,8 +7,9 @@ $(document).on('deviceready', function (e) {
         panel: $("#menu"),
         menu: $("#menu li"),
         header: $(".ui-header .ui-title"),
-        content: $('.ui-content')
-    }, app;
+        content: $('.ui-content'),
+        error: $(".error-log")
+    }, app, history = [], log;
     
     elms.menu.each(function () {
         var li = $(this),
@@ -21,15 +22,43 @@ $(document).on('deviceready', function (e) {
         }
     });
     
-    function log(msg) {
+    log = function (msg) {
         console.log(msg);
-    }
+    };
+    
+    log.error = function (msg) {
+        if (elms.error.html() === "") {
+            elms.error.html(msg);
+            elms.error.fadeIn();
+            setTimeout(function () {
+                elms.error.fadeOut(function () {
+                    elms.error.empty();
+                });
+            }, 5000);
+        }
+    };
     
     app = new App(new ServerConnection("https://baren.dk", log), log);
     bus.trigger("init", [app, log]);
     elms.page.show();
     
+    function navigateTo(newPage, title) {
+        elms.header.html(title);
+        elms.panel.panel('close');
+        elms.page.hide();
+        elms.page = newPage;
+        bus.trigger("page", [app, log, elms.page.attr("id")]);
+        elms.page.fadeIn('slow');
+    }
     
+    $(document).on("backbutton", function (e) {
+        e.preventDefault();
+        if (history.length === 0) {
+            navigator.app.exitApp();
+        } else {
+            navigateTo(history.pop());
+        }
+    });
     
     
     elms.menu.click(function (e) {
@@ -51,13 +80,8 @@ $(document).on('deviceready', function (e) {
             elms.panel.panel('close');
             return;
         }
-        
-        elms.header.html($(this).html());
-        elms.panel.panel('close');
-        elms.page.hide();
-        elms.page = newPage;
-        bus.trigger("page", [app, log, elms.page.attr("id")]);
-        elms.page.fadeIn('slow');
+        history.push(elms.page);
+        navigateTo(newPage, $(this).html());
         
     });
 });

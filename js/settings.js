@@ -6,10 +6,11 @@ bus.on("init", function (e, app, log) {
     function buildClans(select) {
         var i;
         select.empty();
-        select.append($("<option>").val("").html("Ingen valgt"));
+        select.append($("<option>").html("Ingen valgt"));
         for (i = 11; i <= 53; i += 2) {
             select.append($("<option>").val(i).html("Blok " + i));
         }
+        select.append($("<option>").val("").html("Bor ikke på kollegiet"));
         
         select.on("change", function () {
             app.updateUser({
@@ -29,8 +30,12 @@ bus.on("init", function (e, app, log) {
         app.on("user", function (user) {
             if (user) {
                 elms.usernameInp.val(user.name);
-                elms.clanInp.attr("disabled", typeof user.clan === "string");
-                elms.clanInp.val(user.clan);
+                if (typeof user.clan === "string") {
+                    elms.clanInp.attr("disabled", true);
+                    elms.clanInp.val(user.clan);
+                } else {
+                    elms.clanInp.attr("disabled", false);
+                }
             } else {
                 elms.usernameInp.val(null);
             }

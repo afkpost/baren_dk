@@ -33,3 +33,15 @@
 .ui-popup {
     padding: 15px;
 }
+
+.error-log {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-weight: bold;
+    background-image: linear-gradient(transparent, rgba(222,63,63, 0.8), rgba(222,63,63, 1));
+    padding: 0.5em 0 0.3em;
+    display: none;
+}

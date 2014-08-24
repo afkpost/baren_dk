@@ -1,6 +1,6 @@
 /*globals bus, $, cordova, console*/
 
-bus.on("init", function (e, app) {
+bus.on("init", function (e, app, log) {
     "use strict";
     
     if (typeof cordova === "undefined" || cordova.plugins === "undefined") {
@@ -17,7 +17,9 @@ bus.on("init", function (e, app) {
     
     function success(result) {
         console.log(result);
-        app.checkin(result.text);
+        app.checkin(result.text).fail(function () {
+            log.error("Kunne ikke checke ind");
+        });
     }
     
     

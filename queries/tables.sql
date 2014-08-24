@@ -25,7 +25,6 @@ CREATE TABLE offers (
     price       INT NULL,
     startDate   DATE,
     endDate     DATE,
-    pushDate    DATE,
     publishDate DATE
 ) ENGINE = INNODB;
 
@@ -66,9 +65,9 @@ CREATE VIEW upcomming_offers_view AS
 
 SET FOREIGN_KEY_CHECKS = 1;
 
-INSERT INTO offers  (product, image, lim, startDate, endDate, pushDate, publishDate)
-            VALUE   ("Garage", "img/garage.png", 15, CURDATE(), CURDATE(), CURDATE(), CURDATE());
-INSERT INTO offers  (product, image, price, startDate, endDate, pushDate, publishDate)
-            VALUE   ("Somersby", "img/somersby_apple.png", 15, CURDATE(), CURDATE(), CURDATE(), CURDATE());
-INSERT INTO offers  (product, image, lim, startDate, endDate, pushDate, publishDate)
-            VALUE   ("Guld Tuborg", "img/guld_tuborg.png", 30, CURDATE() + INTERVAL 1 DAY, CURDATE() + INTERVAL 2 DAY, CURDATE(), CURDATE());
+INSERT INTO offers  (product, image, lim, startDate, endDate, publishDate)
+            VALUE   ("Garage", "img/garage.png", 15, CURDATE(), CURDATE(), CURDATE());
+INSERT INTO offers  (product, image, price, startDate, endDate, publishDate)
+            VALUE   ("Somersby", "img/somersby_apple.png", 15, CURDATE(), CURDATE(), CURDATE());
+INSERT INTO offers  (product, image, lim, startDate, endDate, publishDate)
+            VALUE   ("Guld Tuborg", "img/guld_tuborg.png", 30, CURDATE() + INTERVAL 1 DAY, CURDATE());

@@ -185,10 +185,11 @@ App = (function() {
             continue;
           }
           offer.remains--;
+          offer.available = false;
           offer.used = "" + (date.getDate()) + "/" + (date.getMonth());
         }
         return store("offers", offers);
-      });
+      }).fail(this.updateOffers);
     };
     this.updateOffers = function() {
       return conn.getOffers().done(function(offers) {
@@ -249,13 +250,10 @@ App = (function() {
     this.checkin = function(token) {
       var res;
       res = conn.checkin(token);
-      res.done(function() {
+      return res.done(function() {
         var checkins;
         checkins = store("checkins" || 0);
         return store("checkins", checkins + 1);
-      });
-      return res.fail(function() {
-        return console.log("could not checkin");
       });
     };
     this.updateRanks = function() {
@@ -296,7 +294,7 @@ App = (function() {
                 if (data.update != null) {
                   switch (data.update) {
                     case "offers":
-                      return updateOffers();
+                      return _this.updateOffers();
                     default:
                       return log("unknown update: " + data.update);
                   }
