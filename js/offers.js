@@ -22,11 +22,20 @@ $(bus).on("init", function (event, app, log) {
             });
         });
 
-        elm.on('click', '.offer button', function () {
+        var held = false;
+        elm.on('taphold', '.offer button', function () {
+            held = true;
             var id = $(this).data("id");
             app.useOffer(id).fail(function () {
                 log.error("Kunne ikke indløse tilbud");
             });
+        });
+        
+        elm.on("tap", function () {
+            if (!held) {
+                log.error("Lad bartenderen trykke");
+            }
+            held = false;
         });
     });
 });

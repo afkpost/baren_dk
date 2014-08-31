@@ -45,4 +45,5 @@
     background-image: -webkit-linear-gradient(transparent, rgba(222,63,63, 0.8), rgba(222,63,63, 1));
     padding: 0.5em 0 0.3em;
     display: none;
+    z-index: 100;
 }

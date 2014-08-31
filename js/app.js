@@ -207,9 +207,9 @@ App = (function() {
         }
         offers.sort(function(o1, o2) {
           if ((o1.available != null) || (o2.available == null)) {
-            return 1;
+            return -1;
           }
-          return -1;
+          return 1;
         });
         return store("offers", offers);
       });

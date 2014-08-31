@@ -70,4 +70,4 @@ INSERT INTO offers  (product, image, lim, startDate, endDate, publishDate)
 INSERT INTO offers  (product, image, price, startDate, endDate, publishDate)
             VALUE   ("Somersby", "img/somersby_apple.png", 15, CURDATE(), CURDATE(), CURDATE());
 INSERT INTO offers  (product, image, lim, startDate, endDate, publishDate)
-            VALUE   ("Guld Tuborg", "img/guld_tuborg.png", 30, CURDATE() + INTERVAL 1 DAY, CURDATE());
+            VALUE   ("Guld Tuborg", "img/guld_tuborg.png", 30, CURDATE() + INTERVAL 1 DAY, CURDATE(), CURDATE());
