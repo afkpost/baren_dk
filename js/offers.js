@@ -31,7 +31,7 @@ $(bus).on("init", function (event, app, log) {
             });
         });
         
-        elm.on("tap", function () {
+        elm.on("tap", '.offer button', function () {
             if (!held) {
                 log.error("Lad bartenderen trykke");
             }

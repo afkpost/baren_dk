@@ -59,6 +59,11 @@ ServerConnection = (function() {
       url = "" + server + "/app/users/" + uid;
       return ajax("GET", url);
     };
+    this.getScore = function() {
+      var url;
+      url = "" + server + "/app/users/" + uid + "/checkin";
+      return ajax("GET", url);
+    };
     this.checkin = function(token) {
       var url;
       url = "" + server + "/app/users/" + uid + "/checkin";
@@ -256,6 +261,9 @@ App = (function() {
         return store("checkins", checkins + 1);
       });
     };
+    conn.getScore().done(function(score) {
+      return store("score", score);
+    });
     this.updateRanks = function() {
       return conn.getRanks().done(function(ranks) {
         return store("ranks", ranks);

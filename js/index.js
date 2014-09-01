@@ -3,7 +3,7 @@ var bus = $('<bus>');
 $(document).on('deviceready', function (e) {
     "use strict";
     var elms = {
-        page: "offers",
+        page: "home",
         panel: $("#menu"),
         menu: $("#menu li"),
         header: $(".ui-header .ui-title"),

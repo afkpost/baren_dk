@@ -2,7 +2,7 @@
     <div class='offer'>
         <h1>{{product}}</h1>
         <div class='poster'>
-            <img src='{{image}}' alt='{{product}}'/>
+            <img src='img/{{image}}' alt='{{product}}'/>
             {{#price}}
                 <div class='banner price'>{{price}}</div>
             {{/price}}
