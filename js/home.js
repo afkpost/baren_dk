@@ -27,6 +27,7 @@ bus.on("init", function (e, app, log) {
         
         $.get("templates/offers.mst").done(function (template) {
             app.on("offers", function (offers) {
+                offers = offers || [];
                 var html = Mustache.render(template, offers);
                 elms.offers.html(html);
             });

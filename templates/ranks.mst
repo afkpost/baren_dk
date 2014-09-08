@@ -8,7 +8,7 @@
     <i>Ingen checkins endnu - skal du være den første?</i>
 {{/user}}
 
-<h1>Mest besøgende gang</h1>
+<h1>Mest besøgende blok</h1>
 <ol>
     {{#clan}}
         <li>Blok {{clan}} <span class='score'>{{count}} besøg</span></li>

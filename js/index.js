@@ -38,7 +38,7 @@ $(document).on('deviceready', function (e) {
         }
     };
     
-    app = new App(new ServerConnection("https://baren.dk", log), log);
+    app = new App(new ServerConnection("http://baren.dk", log), log);
     bus.trigger("init", [app, log]);
     elms.page.show();
     

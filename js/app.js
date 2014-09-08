@@ -38,7 +38,7 @@ ServerConnection = (function() {
         contentType: "application/json",
         data: body
       })).fail(function(xhr) {
-        return log("" + url + ": " + xhr.status + " " + xhr.statusText);
+        return log.error("" + url + ": " + xhr.status + " " + xhr.statusText);
       });
     };
     if (typeof device !== "undefined" && device !== null) {
@@ -250,6 +250,7 @@ App = (function() {
         for (_i = 0, _len = offers.length; _i < _len; _i++) {
           offer = offers[_i];
           offer.startDate = parseDate(offer.startDate);
+          offer.expires = parseDate(offer.expires);
         }
         return store("upcommingOffers", offers);
       });

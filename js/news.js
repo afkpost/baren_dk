@@ -7,7 +7,11 @@ $(bus).on("init", function (event, app) {
         newsElm = $('#news');
         
         app.on("news", function (news) {
-            newsElm.html(Mustache.render(newsTemplate, news));
+            var html = "";
+            if (news) {
+                html = Mustache.render(newsTemplate, news);
+            }
+            newsElm.html(html);
         });
     });
 });

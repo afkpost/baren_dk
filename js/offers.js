@@ -13,12 +13,15 @@ $(bus).on("init", function (event, app, log) {
             elmUpcomming = elm.find('#upcomming_offers');
             
             app.on("offers", function (offers) {
+                offers = offers || [];
                 var html = Mustache.render(offersTemplate, offers);
                 elmOffers.html(html);
             });
 
             app.on("upcommingOffers", function (offers) {
-                elmUpcomming.html(Mustache.render(offersTemplate, offers));
+                offers = offers || [];
+                var html = Mustache.render(offersTemplate, offers);
+                elmUpcomming.html(html);
             });
         });
 

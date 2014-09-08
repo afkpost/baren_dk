@@ -1,8 +1,35 @@
 * {
+    touch-callout: none;
+    -o-touch-callout: none;
+    -ms-touch-callout: none;
+    -moz-touch-callout: none;
     -webkit-touch-callout: none;
-    -webkit-user-select: text;
-    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
-    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+    
+    user-select: none;   
+    -o-user-select: none;   
+    -ms-user-select: none;   
+    -moz-user-select: none;   
+    -webkit-user-select: none;   
+    
+    text-size-adjust: none;
+    -o-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    
+    tap-highlight-color: transparent;
+    -o-tap-highlight-color: transparent;
+    -ms-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input {
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    -o-user-select: auto !important;
+    user-select: auto !important;  
 }
 
 .page {
@@ -43,6 +70,9 @@
     text-align: center;
     font-weight: bold;
     background-image: linear-gradient(transparent, rgba(222,63,63, 0.8), rgba(222,63,63, 1));
+    background-image: -o-linear-gradient(transparent, rgba(222,63,63, 0.8), rgba(222,63,63, 1));
+    background-image: -ms-linear-gradient(transparent, rgba(222,63,63, 0.8), rgba(222,63,63, 1));
+    background-image: -moz-linear-gradient(transparent, rgba(222,63,63, 0.8), rgba(222,63,63, 1));
     background-image: -webkit-linear-gradient(transparent, rgba(222,63,63, 0.8), rgba(222,63,63, 1));
     padding: 0.5em 0 0.3em;
     display: none;

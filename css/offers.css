@@ -11,16 +11,19 @@
     display: inline-block;
     padding: 5px 10px;
     margin: 0px 5px;
+    background: black;
     background-image: radial-gradient(red, #100, black);
-    background-image: -webkit-radial-gradient(red, #100, black);
-    background-image: -moz-radial-gradient(red, #100, black);
     background-image: -o-radial-gradient(red, #100, black);
+    background-image: -ms-radial-gradient(red, #100, black);
+    background-image: -moz-radial-gradient(red, #100, black);
+    background-image: -webkit-radial-gradient(red, #100, black);
     width: 300px;
     max-width: 70%;
 }
 
 .offer .expires {
-    font-size: 0.6em;
+    font-size: 0.8em;
+    text-align: right;
 }
 
 .offer .expires:before {
@@ -48,10 +51,12 @@
     position: relative;
     margin: auto;
     width: 100%;
+    background: #C00;
     background-image: linear-gradient(#FF2200, #CC0000, #0F0000);
-    background-image: -webkit-linear-gradient(#FF2200, #CC0000, #0F0000);
-    background-image: -moz-linear-gradient(#FF2200, #CC0000, #0F0000);
     background-image: -o-linear-gradient(#FF2200, #CC0000, #0F0000);
+    background-image: -ms-linear-gradient(#FF2200, #CC0000, #0F0000);
+    background-image: -moz-linear-gradient(#FF2200, #CC0000, #0F0000);
+    background-image: -webkit-linear-gradient(#FF2200, #CC0000, #0F0000);
     width: 160px;
     height: 224px;
     overflow: hidden;
@@ -75,8 +80,16 @@
     right: -2.5em;
     padding: 0 3em;
     font-weight: bold;
+    background: rgb(255, 255, 127);
     background-image: radial-gradient(white, yellow);
+    background-image: -o-radial-gradient(white, yellow);
+    background-image: -ms-radial-gradient(white, yellow);
+    background-image: -moz-radial-gradient(white, yellow);
     background-image: -webkit-radial-gradient(white, yellow);
+    transform: rotate3d(0,0,1, 30deg);
+    -o-transform: rotate3d(0,0,1, 30deg);
+    -ms-transform: rotate3d(0,0,1, 30deg);
+    -moz-transform: rotate3d(0,0,1, 30deg);
     -webkit-transform: rotate3d(0,0,1, 30deg);
     color: black;
     font-size: 1.7em;
@@ -119,7 +132,12 @@
     z-index: 20;
     font-size: 1.3em;
     background: rgba(255,255,255,0.4);
+    transform: rotate3d(0,0,1, -20deg);
+    -o-transform: rotate3d(0,0,1, -20deg);
+    -ms-transform: rotate3d(0,0,1, -20deg);
+    -moz-transform: rotate3d(0,0,1, -20deg);
     -webkit-transform: rotate3d(0,0,1, -20deg);
+    transform: rotate3d(0,0,1, -20deg);
 }
 
 #upcomming_offers button {
