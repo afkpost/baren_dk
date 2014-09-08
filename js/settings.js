@@ -50,5 +50,6 @@ bus.on("init", function (e, app, log) {
             });
         });
         */
+        elm.enhanceWithin();
     });
 });
