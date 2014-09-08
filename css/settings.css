@@ -1,27 +1,9 @@
-#settings table {
-    margin: 2em 0;
-    width: 100%;
-}
-
-#settings table {
-    font-size: 1.1em;
-    border-collapse: collapse;
-}
-
-#settings th[colspan='2'] {
-    font-size: 1.3em;
+#settings h2 {
     color: #CD0000;
 }
 
-#settings th {
-    text-align: left;
+#settings label {
+    margin-top: 1.5em;
     font-weight: bold;
-}
-
-#settings td {
-    width: 50%;
-}
-
-#settings td {
-    text-align: right;
+    font-size: 1.2em;
 }

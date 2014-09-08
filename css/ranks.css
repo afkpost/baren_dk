@@ -19,7 +19,6 @@
 
 #ranks li:nth-child(n+6) {
     display: none;
-    font-size: 0.9em;
 }
 
 #ranks ol.open li {

@@ -27,7 +27,6 @@ bus.on("init", function (e, app, log) {
         };
         buildClans(elms.clanInp);
          
-        /*
         app.on("user", function (user) {
             if (user) {
                 elms.usernameInp.val(user.name);
@@ -41,15 +40,13 @@ bus.on("init", function (e, app, log) {
                 elms.usernameInp.val(null);
             }
         });
-        */
         
-        /*
-        elms.usernameInp.change(function () {
+        elms.usernameInp.focusout(function () {
             app.updateUser({
                 name: elms.usernameInp.val()
             });
         });
-        */
+        
         elm.enhanceWithin();
     });
 });
