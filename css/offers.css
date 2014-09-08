@@ -19,6 +19,14 @@
     max-width: 70%;
 }
 
+.offer .expires {
+    font-size: 0.6em;
+}
+
+.offer .expires:before {
+    content: "Udløber: ";
+}
+
 .offers .no-offer {
     text-align: left;
     font-style: italic;

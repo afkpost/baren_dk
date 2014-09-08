@@ -4,6 +4,7 @@ var App, CacheStore, ServerConnection;
 CacheStore = (function() {
   function CacheStore() {
     var memory;
+    alert("using fake store");
     memory = [];
     this.getItem = function(key) {
       var res;
@@ -224,6 +225,7 @@ App = (function() {
         for (_i = 0, _len = offers.length; _i < _len; _i++) {
           offer = offers[_i];
           offer.available = true;
+          offer.expires = parseDate(offer.expires);
           if (offer.used) {
             offer.available = false;
             offer.used = parseDate(offer.used);
