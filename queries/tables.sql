@@ -15,7 +15,7 @@ CREATE TABLE app_users (
     name        TEXT,
     clan        VARCHAR(4),
     updated     TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
-);
+) ENGINE = INNODB;
 
 CREATE TABLE offers (
     id          INT PRIMARY KEY AUTO_INCREMENT,
@@ -41,7 +41,7 @@ CREATE TABLE checkins (
     id              VARCHAR(64),
     token           VARCHAR(72),
     created         TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
+) ENGINE = INNODB;
 
 ALTER TABLE checkins
 ADD CONSTRAINT one_checkin_pr_day UNIQUE (id, token);

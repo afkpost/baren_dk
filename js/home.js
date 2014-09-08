@@ -33,7 +33,7 @@ bus.on("init", function (e, app, log) {
         });
         
         app.on("score", function (score) {
-            elms.score.html(score.score);
+            elms.score.html(score);
         });
         
         

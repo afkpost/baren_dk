@@ -279,12 +279,12 @@ App = (function() {
       res = conn.checkin(token);
       return res.done(function() {
         var checkins;
-        checkins = store("checkins" || 0);
-        return store("checkins", checkins + 1);
+        checkins = (store("score")) || 0;
+        return store("score", checkins + 1);
       });
     };
     conn.getScore().done(function(score) {
-      return store("score", score);
+      return store("score", score.score);
     });
     this.updateRanks = function() {
       return conn.getRanks().done(function(ranks) {

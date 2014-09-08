@@ -26,7 +26,8 @@ bus.on("init", function (e, app, log) {
             clanInp: elm.find("select.clan")
         };
         buildClans(elms.clanInp);
-                
+         
+        /*
         app.on("user", function (user) {
             if (user) {
                 elms.usernameInp.val(user.name);
@@ -40,20 +41,14 @@ bus.on("init", function (e, app, log) {
                 elms.usernameInp.val(null);
             }
         });
+        */
         
+        /*
         elms.usernameInp.change(function () {
             app.updateUser({
                 name: elms.usernameInp.val()
             });
         });
-    });
-    
-    $('#btn_create_user').click(function () {
-        app.updateUser({
-            name: $("#inp_username").val(),
-            clan: $("#inp_clan").val()
-        }, function () {
-            $('#popupLogin').popup("close");
-        });
+        */
     });
 });
