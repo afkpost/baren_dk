@@ -4,9 +4,6 @@ DROP TABLE IF EXISTS offers;
 DROP TABLE IF EXISTS used;
 DROP TABLE IF EXISTS checkins;
 DROP TABLE IF EXISTS app_users;
-DROP VIEW IF EXISTS current_offers_view;
-DROP VIEW IF EXISTS used_view;
-DROP VIEW IF EXISTS upcomming_offers_view;
 
 CREATE TABLE app_users (
     id          VARCHAR(64) PRIMARY KEY,
@@ -45,23 +42,6 @@ CREATE TABLE checkins (
 
 ALTER TABLE checkins
 ADD CONSTRAINT one_checkin_pr_day UNIQUE (id, token);
-
-CREATE VIEW used_view AS
-    SELECT DISTINCT offer, count(offer) AS cnt FROM used GROUP BY offer;
-
-CREATE VIEW current_offers_view AS
-    SELECT id, product, image, (lim - IFNULL(cnt, 0)) AS remains, price
-    FROM offers LEFT JOIN used_view ON id = offer
-    WHERE
-        startDate <= DATE(SUBTIME(NOW(), MAKETIME(7,0,0))) AND /*Date ends at 5am*/
-        endDate   >= DATE(SUBTIME(NOW(), MAKETIME(7,0,0)));
-
-CREATE VIEW upcomming_offers_view AS
-    SELECT id, product, image, lim AS remains, price, startDate
-    FROM offers
-    WHERE
-        startDate    > DATE(SUBTIME(NOW(), MAKETIME(7,0,0))) AND
-        publishDate <= DATE(SUBTIME(NOW(), MAKETIME(7,0,0)));
 
 SET FOREIGN_KEY_CHECKS = 1;
 

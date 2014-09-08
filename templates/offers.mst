@@ -22,6 +22,9 @@
                 <div class='text'>{{text}}</div>
             {{/text}}
         </div>
+        <div class='expires'>
+            {{expires}}
+        </div>
         {{#available}}
             <button class='ui-btn' data-id='{{id}}'>Indløs</button>
         {{/available}}
