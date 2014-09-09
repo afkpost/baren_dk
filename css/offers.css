@@ -4,6 +4,11 @@
     text-align: center;
     margin: 0;
     overflow-y: hidden;
+    -webkit-user-select: auto !important;
+    -moz-user-select: auto !important;
+    -ms-user-select: auto !important;
+    -o-user-select: auto !important;
+    user-select: auto !important;  
 }
 
 .offer {
