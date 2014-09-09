@@ -31,11 +31,12 @@ bus.on("init", function (e, app, log) {
             if (user) {
                 elms.usernameInp.val(user.name);
                 if (typeof user.clan === "string") {
-                    elms.clanInp.attr("disabled", true);
+                    elms.clanInp.selectmenu("disable");
                     elms.clanInp.val(user.clan);
                 } else {
-                    elms.clanInp.attr("disabled", false);
+                    elms.clanInp.selectmenu("enable");
                 }
+                elms.clanInp.selectmenu("refresh");
             } else {
                 elms.usernameInp.val(null);
             }
