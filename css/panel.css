@@ -2,6 +2,10 @@
     color: #CD0000;
 }
 
+#menu li:hover {
+    background: #333;
+}
+
 #menu li:first-letter {
     color: red;
     font-weight: bold;

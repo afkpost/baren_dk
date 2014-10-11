@@ -29,6 +29,7 @@ bus.on("init", function (e, app, log) {
          
         app.on("user", function (user) {
             if (user) {
+                elms.clanInp.selectmenu();
                 elms.usernameInp.val(user.name);
                 if (typeof user.clan === "string") {
                     elms.clanInp.selectmenu("disable");

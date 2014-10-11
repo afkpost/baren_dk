@@ -158,7 +158,8 @@ App = (function() {
         return callback(store(event));
       } catch (_error) {
         e = _error;
-        return log("could not call callback " + (callback.toString()));
+        log("could not call callback " + (callback.toString()));
+        return log(e.stack);
       }
     };
     get = function(key) {
