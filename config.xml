@@ -38,16 +38,16 @@
     <icon gap:platform="android" gap:qualifier="xhdpi" src="res/android/xhdpi/icon.png" />
     <icon gap:platform="android" gap:qualifier="xxhdpi" src="res/android/xxhdpi/icon.png" />
     
-    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="res/mdpi/splash.png"/>
-    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/hdpi/splash.png"/>
-    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/xhdpi/splash.png"/>
+    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="res/android/mdpi/splash.png"/>
+    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="res/android/hdpi/splash.png"/>
+    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/android/xhdpi/splash.png"/>
     
     <!-- iOS -->
     <icon gap:platform="ios" height="120" width="120" src="res/ios/icon.png"/>
     
-    <gap:splash gap:platform="ios" height="960"  width="640" src="res/ios/splash_h960"  />
-    <gap:splash gap:platform="ios" height="1136" width="640" src="res/ios/splash_h1136" />
-    <gap:splash gap:platform="ios" height="1334" width="750" src="res/ios/splash_h1334" />
+    <gap:splash gap:platform="ios" width="640" height="960"  src="res/ios/splash_h960.png"  />
+    <gap:splash gap:platform="ios" width="640" height="1136" src="res/ios/splash_h1136.png" />
+    <gap:splash gap:platform="ios" width="750" height="1334" src="res/ios/splash_h1334.png" />
     
     <access origin="http://baren.dk" />
     <access origin="https://baren.dk" />
