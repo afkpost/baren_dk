@@ -344,7 +344,6 @@ App = (function() {
         return log(success);
       };
       pushError = function(err) {
-        alert(JSON.stringify(err));
         return log.error(err);
       };
       platform = device.platform || "unknown";
@@ -363,12 +362,12 @@ App = (function() {
             token: token
           });
         };
-        pushNotification.register(tokenHandler, pushError({
+        pushNotification.register(tokenHandler, pushError, {
           "bagde": false,
           "sound": false,
           "alert": true,
           "ecb": "iosPush"
-        }));
+        });
       } else {
         log("platform not supported");
       }
