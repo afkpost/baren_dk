@@ -356,6 +356,7 @@ App = (function() {
         });
       } else if (platform === "ios") {
         tokenHandler = function(token) {
+          alert(token);
           return conn.updateUser({
             token: token
           });
