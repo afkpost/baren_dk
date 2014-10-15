@@ -344,6 +344,7 @@ App = (function() {
         return log(success);
       };
       pushError = function(err) {
+        alert(JSON.stringify(err));
         return log.error(err);
       };
       platform = device.platform || "unknown";
