@@ -84,4 +84,7 @@ $(document).on('deviceready', function (e) {
         navigateTo(newPage, $(this).html());
         
     });
+    if (navigator.splashscreen) {
+        navigator.splashscreen.hide();
+    }
 });
