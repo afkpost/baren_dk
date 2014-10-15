@@ -344,7 +344,7 @@ App = (function() {
         return log(success);
       };
       pushError = function(err) {
-        return log(err);
+        return log.error(err);
       };
       platform = device.platform || "unknown";
       platform = platform.toLowerCase();
@@ -355,6 +355,7 @@ App = (function() {
           ecb: "androidPush"
         });
       } else if (platform === "ios") {
+        alert("iOS");
         tokenHandler = function(token) {
           alert(token);
           return conn.updateUser({
