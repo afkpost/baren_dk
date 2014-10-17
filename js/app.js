@@ -27,7 +27,6 @@ window.iosPush = function(e) {
 CacheStore = (function() {
   function CacheStore() {
     var memory;
-    alert("using fake store");
     memory = [];
     this.getItem = function(key) {
       var res;
@@ -355,9 +354,7 @@ App = (function() {
           ecb: "androidPush"
         });
       } else if (platform === "ios") {
-        alert("iOS");
         tokenHandler = function(token) {
-          alert(token);
           return conn.updateUser({
             token: token
           });
