@@ -7,15 +7,15 @@
 }
 
 
-.events ul h2 {
+.events ul h3 {
     font-size: 1.1em;
     margin-bottom: 0;
 }
 
-.events ul h3 {
+.events ul h4 {
     margin-top: 0;
 }
 
-.events ul h3:first-letter {
+.events ul h4:first-letter {
     text-transform: uppercase;
 }

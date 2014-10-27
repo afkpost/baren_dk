@@ -5,8 +5,8 @@
             <li data-role='list-divider' class='list-header'>{{month}}</li>
             {{#events}}
                 <li data-role='collapsible data-isset='false' data-icon='false'>
-                    <h2>{{title}}</h2>
-                    <h3>{{date}}</h3>
+                    <h3>{{title}}</h3>
+                    <h4>{{date}}</h4>
                 </li>
             {{/events}}
         {{/events}}

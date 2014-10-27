@@ -24,3 +24,7 @@
 .drinks li.open p {
     white-space: normal;
 }
+
+ul.drinks-list {
+    margin-top: 0 !important;
+}

@@ -4,11 +4,6 @@
     text-align: center;
     margin: 0;
     overflow-y: hidden;
-    -webkit-user-select: auto !important;
-    -moz-user-select: auto !important;
-    -ms-user-select: auto !important;
-    -o-user-select: auto !important;
-    user-select: auto !important;  
 }
 
 .offer {
@@ -17,11 +12,6 @@
     padding: 5px 10px;
     margin: 0px 5px;
     background: black;
-    background-image: radial-gradient(red, #100, black);
-    background-image: -o-radial-gradient(red, #100, black);
-    background-image: -ms-radial-gradient(red, #100, black);
-    background-image: -moz-radial-gradient(red, #100, black);
-    background-image: -webkit-radial-gradient(red, #100, black);
     width: 300px;
     max-width: 70%;
 }
@@ -56,12 +46,7 @@
     position: relative;
     margin: auto;
     width: 100%;
-    background: #C00;
-    background-image: linear-gradient(#FF2200, #CC0000, #0F0000);
-    background-image: -o-linear-gradient(#FF2200, #CC0000, #0F0000);
-    background-image: -ms-linear-gradient(#FF2200, #CC0000, #0F0000);
-    background-image: -moz-linear-gradient(#FF2200, #CC0000, #0F0000);
-    background-image: -webkit-linear-gradient(#FF2200, #CC0000, #0F0000);
+    background-image: url(../img/graphics/poster.png);
     width: 160px;
     height: 224px;
     overflow: hidden;

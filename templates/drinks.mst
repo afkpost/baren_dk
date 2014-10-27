@@ -1,5 +1,5 @@
 <div class='drinks'>
-    <ul class='ui-mini'>
+    <ul class='ui-mini drinks-list'>
         {{#groups}}
             <li data-role='list-divider'><h2>{{group}}</h2></li>
             {{#drinks}}
