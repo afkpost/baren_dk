@@ -27,7 +27,7 @@ bus.on("init", function (e, app, log) {
         console.log(err);
     }
     
-    $('#checkin').click(function () {
+    $('#checkin').tap(function () {
         scan(success, error);
     });
 });

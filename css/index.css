@@ -61,6 +61,11 @@ input {
     padding: 15px;
 }
 
+* {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
 .error-log {
     position: fixed;
     bottom: 0;
@@ -78,7 +83,7 @@ input {
     z-index: 100;
 }
 
-.ui-header a {
+.ui-header button {
     height: 80%;
     top: 0;
     width: 3em;
@@ -87,10 +92,8 @@ input {
     background-size: 80%;
     background-repeat: no-repeat;
     cursor: pointer;
-}
-
-.ui-header a:hover {
-    background-color: #333;
+    background-color: transparent !important;
+    border: none;
 }
 
 .ui-header .menu-btn {

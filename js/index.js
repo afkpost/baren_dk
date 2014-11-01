@@ -1,9 +1,10 @@
 /*globals $, Mustache, console, App, ServerConnection*/
 var bus = $('<bus>');
-$(document).on('deviceready', function (e) {
+$(document).one('deviceready', function (e) {
     "use strict";
     var elms = {
         page: "home",
+        menubtn: $("#menu-btn"),
         panel: $("#menu"),
         menu: $("#menu li"),
         header: $(".ui-header .ui-title"),
@@ -60,8 +61,11 @@ $(document).on('deviceready', function (e) {
         }
     });
     
+    elms.menubtn.tap(function () {
+        elms.panel.panel("toggle");
+    });
     
-    elms.menu.click(function (e) {
+    elms.menu.tap(function (e) {
         var page, newPage;
         e.preventDefault();
         page = $(this).data("page");
@@ -88,3 +92,8 @@ $(document).on('deviceready', function (e) {
         navigator.splashscreen.hide();
     }
 });
+
+setTimeout(function () {
+    "use strict";
+    $(document).trigger("deviceready");
+}, 1000);
