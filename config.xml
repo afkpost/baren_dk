@@ -48,7 +48,9 @@
     <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="res/android/xhdpi/splash.png"/>
     
     <!-- iOS -->
-    <icon gap:platform="ios" height="120" width="120" src="res/ios/icon.png"/>
+    <icon gap:platform="ios" height="120" width="120" src="res/ios/icon_120.png"/>
+    <icon gap:platform="ios" height="57" width="57" src="res/ios/icon_57.png"/>
+    <icon gap:platform="ios" height="72" width="72" src="res/ios/icon_72.png"/>
     
     <gap:splash gap:platform="ios" width="640" height="960"  src="res/ios/splash_h960.png"  />
     <gap:splash gap:platform="ios" width="640" height="1136" src="res/ios/splash_h1136.png" />
