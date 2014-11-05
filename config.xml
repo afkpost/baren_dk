@@ -16,9 +16,7 @@
     <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview" value="false" />
-    
     <preference name="ios-statusbarstyle" value="black-opaque" />
-    
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="true" />
     <preference name="auto-hide-splash-screen" value="true" />
@@ -31,7 +29,6 @@
     <gap:plugin name="com.phonegap.plugins.barcodescanner" version="2.0.0" />
     <gap:plugin name="org.apache.cordova.device" version="0.2.12" />
     <gap:plugin name="com.phonegap.plugin.statusbar" version="1.1.0" />
-    
     
     <!-- android -->
     <preference name="android-minSdkVersion" value="7" />
