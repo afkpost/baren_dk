@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="dk.baren" version="0.4.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="dk.baren" version="0.4.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Baren.dk</name>
     <description>
         Baren.dk
@@ -49,6 +49,7 @@
     <icon gap:platform="ios" height="114" width="114" src="res/ios/icon-57@2x.png"/>
     <icon gap:platform="ios" height="72" width="72" src="res/ios/icon-72.png"/>
     <icon gap:platform="ios" height="144" width="144" src="res/ios/icon-72@2x.png"/>
+    <icon gap:platform="ios" height="144" width="144" src="res/ios/icon-120.png"/>
     
     <gap:splash gap:platform="ios" width="640" height="960"  src="res/ios/splash_h960.png"  />
     <gap:splash gap:platform="ios" width="640" height="1136" src="res/ios/splash_h1136.png" />
